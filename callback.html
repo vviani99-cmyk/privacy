@@ -32,7 +32,7 @@
       document.getElementById('msg').className = 'error';
       document.getElementById('msg').textContent = 'Authorization failed: ' + error;
     } else if (code && state) {
-      const local = 'http://localhost:8080/callback/?code=' + encodeURIComponent(code)
+      const local = 'http://localhost:8585/callback/?code=' + encodeURIComponent(code)
                   + '&state=' + encodeURIComponent(state)
                   + (realmId ? '&realmId=' + encodeURIComponent(realmId) : '');
       window.location.href = local;
